@@ -142,4 +142,19 @@
   .Button[data-selected] .LED {
     background: var(--primary);
   }
+
+  @media (prefers-color-scheme: dark) {
+    .Button {
+      background: #333;
+      color: #f5f5f5;
+      box-shadow: rgba(255, 255, 255, 0.1) 1px 1px 1px 0px inset,
+        rgba(0, 0, 0, 0.7) -1px -1px 1px 0px inset,
+        rgba(0, 0, 0, 0.6) 0.444584px 0.444584px 0.628737px -1px,
+        rgba(0, 0, 0, 0.5) 1.21072px 1.21072px 1.71222px -1.5px,
+        rgba(0, 0, 0, 0.5) 2.6583px 2.6583px 3.75941px -2.25px,
+        rgba(0, 0, 0, 0.5) 5.90083px 5.90083px 8.34503px -3px,
+        rgba(0, 0, 0, 0.2) 10px 10px 21.2132px -3.75px,
+        -0.5px -0.5px 0 0 rgb(255 255 255 / 5%);
+    }
+  }
 }

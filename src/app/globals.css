@@ -5,15 +5,28 @@
   --foreground: #222;
   --primary: #ff4a00;
   --page-max-width: 1300px;
+  --screen: #f3f3f3;
+  --black-10: rgba(0, 0, 0, 0.1);
+  --black-50: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111;
+    --foreground: #f5f5f5;
+    --screen: #1a1a1a;
+    --black-10: rgba(255, 255, 255, 0.1);
+    --black-50: rgba(255, 255, 255, 0.5);
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-screen: #f3f3f3;
-  --color-black-10: rgba(0, 0, 0, 0.1);
-  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-screen: var(--screen);
+  --color-black-10: var(--black-10);
+  --color-black-50: var(--black-50);
 }
 
 @theme static {
@@ -38,15 +51,6 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-
-  @variant sm {
-    background-image: linear-gradient(
-      to bottom right,
-      #f8f8f8,
-      var(--background) 20%
-    );
-    background-repeat: no-repeat;
-  }
 }
 
 svg {
